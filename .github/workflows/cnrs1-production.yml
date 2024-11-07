@@ -2,11 +2,11 @@ name: Deploy to CNRS1/INOUI environment
 
 on:
   push:
-    branches: [cnrs1]
+    branches: [main]
   pull_request:
-    branches: [cnrs1]
+    branches: [main]
   workflow_dispatch:
-    branches: [cnrs1]
+    branches: [main]
 
 jobs:
   build:
