@@ -7,7 +7,7 @@ export const initRouter = (app) => {
     history: createWebHistory(),
     routes: [
       {
-        path: "/",
+        path: "/pondichery",
         component: AppMap,
         meta: {
           layout: "LayoutDefault",
