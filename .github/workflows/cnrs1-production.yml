@@ -74,6 +74,6 @@ jobs:
 
       - name: Start server
         run: |
-          pm2 stop immersion || pm2 start npm --name "immersion" -- run prod
-          pm2 start immersion
+          pm2 stop pondichery || pm2 start npm --name "pondichery" -- run prod
+          pm2 start pondichery
           pm2 save
