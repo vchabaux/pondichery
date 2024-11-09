@@ -65,6 +65,18 @@ jobs:
           npm install
           npm run build
           cd ..
+          
+      # Ajoutez une étape pour télécharger le dossier build du client comme artefact pour GitHub Pages
+      - name: Upload client build artifact for GitHub Pages
+        if: success()
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./client/dist
+
+      # Ajoutez une étape de déploiement sur GitHub Pages
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: actions/deploy-pages@v1
 
       - name: Install server
         run: |
