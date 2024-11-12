@@ -4,7 +4,7 @@ import AppMap from "@/pages/app/AppMap.vue";
 
 export const initRouter = (app) => {
   const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory("/pondichery/"),
     routes: [
       {
         path: "/",
