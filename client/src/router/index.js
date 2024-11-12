@@ -225,7 +225,7 @@ export const initRouter = (app) => {
   router.beforeEach(async (to, from) => {
     // window.localStorage.removeItem("hasOnboarded"); // this is for testing purposes
     const isNew = window.localStorage.getItem("hasOnboarded") === null;
-    if (isNew && to.meta.client) return "/pondichery/intro";
+    //if (isNew && to.meta.client) return "/pondichery/intro";
 
     const canAccess = await canUserAccess(to);
     return canAccess || "/pondichery/auth/signin";
