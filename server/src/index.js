@@ -34,7 +34,7 @@ app.use(
   cors({
     origin: config.app.allowedDomains,
     credentials: true,
-    methods: ['GET', 'POST', 'OPTIONS']
+    methods: ['GET','PUT','POST','DELETE','PATCH','OPTIONS']
   })
 );
 
