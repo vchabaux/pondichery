@@ -34,14 +34,9 @@ app.use(
   cors({
     origin: config.app.allowedDomains,
     credentials: true,
-    methods: ['GET','PUT','POST','DELETE','PATCH','OPTIONS']
   })
 );
 
-app.options('*', cors({
-  origin: 'https://vchabaux.github.io',
-  credentials: true
-}));
 
 app.use(express.static(path.join(__dirname, "..", "public")));
 
