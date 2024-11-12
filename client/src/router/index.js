@@ -22,7 +22,7 @@ export const initRouter = (app) => {
         },
       },
       {
-        path: "/more/:slug",
+        path: "/pondichery/more/:slug",
         component: () => import("@/pages/app/AppPage.vue"),
         meta: {
           layout: "LayoutDefault",
@@ -30,7 +30,7 @@ export const initRouter = (app) => {
         },
       },
       {
-        path: "/more/musicians",
+        path: "/pondichery/more/musicians",
         component: () => import("@/pages/app/AppMusicians.vue"),
         meta: {
           layout: "LayoutDefault",
@@ -38,7 +38,7 @@ export const initRouter = (app) => {
         },
       },
       {
-        path: "/more/cards",
+        path: "/pondichery/more/cards",
         component: () => import("@/pages/app/AppCards.vue"),
         meta: {
           layout: "LayoutDefault",
@@ -49,7 +49,7 @@ export const initRouter = (app) => {
        * ADMIN
        */
       {
-        path: "/admin",
+        path: "/pondichery/admin",
         component: () => import("@/pages/Dashboard.vue"),
         meta: {
           auth: true,
@@ -160,14 +160,14 @@ export const initRouter = (app) => {
        * AUTH
        */
       {
-        path: "/auth/signin",
+        path: "/pondichery/auth/signin",
         component: () => import("@/pages/auth/Signin.vue"),
         meta: {
           layout: "LayoutForm",
         },
       },
       {
-        path: "/password-reset",
+        path: "/pondichery/password-reset",
         component: () => import("@/pages/auth/ResetPassword.vue"),
         meta: {
           auth: false,
@@ -176,7 +176,7 @@ export const initRouter = (app) => {
         },
       },
       {
-        path: "/password-forgotten",
+        path: "/pondichery/password-forgotten",
         component: () => import("@/pages/auth/ForgotPassword.vue"),
         meta: {
           auth: false,
@@ -185,7 +185,7 @@ export const initRouter = (app) => {
         },
       },
       {
-        path: "/account-invitation",
+        path: "/pondichery/account-invitation",
         component: () => import("@/pages/auth/AccountInvitation.vue"),
         meta: {
           auth: false,
@@ -194,7 +194,7 @@ export const initRouter = (app) => {
         },
       },
       {
-        path: "/account-confirm",
+        path: "/pondichery/account-confirm",
         component: () => import("@/pages/auth/AccountConfirmation.vue"),
         meta: {
           auth: false,
@@ -206,14 +206,14 @@ export const initRouter = (app) => {
        * NOT FOUND
        */
       {
-        path: "/admin/:pathMatch(.*)*",
+        path: "/pondichery/admin/:pathMatch(.*)*",
         component: () => import("@/pages/NotFound.vue"),
         meta: {
           layout: "LayoutDashboard",
         },
       },
       {
-        path: "/:pathMatch(.*)*",
+        path: "/pondichery/:pathMatch(.*)*",
         component: () => import("@/pages/NotFound.vue"),
         meta: {
           layout: "LayoutDefault",
@@ -228,7 +228,7 @@ export const initRouter = (app) => {
     if (isNew && to.meta.client) return "/pondichery/intro";
 
     const canAccess = await canUserAccess(to);
-    return canAccess || "/auth/signin";
+    return canAccess || "/pondichery/auth/signin";
   });
 
   return router;
