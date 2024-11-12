@@ -69,16 +69,16 @@ const links = [
   { name: "Categories", path: "/admin/categories" },
 ];
 
-app.value === "cnrs1" ? links.unshift({ name: "Artists", path: "/admin/musicians" }) : links.unshift({ name: "Playlists", path: "/admin/playlists" });
+app.value === "cnrs1" ? links.unshift({ name: "Artists", path: "/pondichery/admin/musicians" }) : links.unshift({ name: "Playlists", path: "/pondichery/admin/playlists" });
 
-app.value === "cnrs1" ? links.push({ name: "Nakala", path: "/admin/nakala" }) : links.push({ name: "Medias", path: "/admin/medias" });
+app.value === "cnrs1" ? links.push({ name: "Nakala", path: "/pondichery/admin/nakala" }) : links.push({ name: "Medias", path: "/pondichery/admin/medias" });
 
 isAdmin.value &&
   links.push(
-    { name: "Users", path: "/admin/users" },
-    { name: "Content", path: "/admin/content" },
-    { name: "Settings", path: "/admin/settings" },
-    { name: "Icons", path: "/admin/icons" }
+    { name: "Users", path: "/pondichery/admin/users" },
+    { name: "Content", path: "/pondichery/admin/content" },
+    { name: "Settings", path: "/pondichery/admin/settings" },
+    { name: "Icons", path: "/pondichery/admin/icons" }
   );
 
 const pending = computed(() => {
