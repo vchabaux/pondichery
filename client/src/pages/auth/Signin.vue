@@ -63,7 +63,7 @@ const handleCredentials = async () => {
     submitting.value = true;
     await authStore.signin(user.value);
     submitting.value = false;
-    router.push("/admin");
+    router.push("/pondichery/admin");
   } catch (err) {
     submitting.value = false;
     if (err.response) {

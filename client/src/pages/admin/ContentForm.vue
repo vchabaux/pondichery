@@ -197,7 +197,7 @@ function addMedia(value) {
 
 function save() {
   pageStore.update(currentPage.value._id, page.value);
-  router.push("/admin/content");
+  router.push("/pondichery/admin/content");
 }
 </script>
 

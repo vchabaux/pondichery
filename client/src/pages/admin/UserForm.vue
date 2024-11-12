@@ -130,14 +130,14 @@ const save = handleSubmit(async (values, {}) => {
       email: email,
       expiresAt: isTemporary.value ? expiresAt : null,
     });
-    router.push("/admin/users");
+    router.push("/pondichery/admin/users");
   } else {
     const _user = isTemporary.value
       ? { email, role, expiresAt, name }
       : { email, role, name };
 
     await userStore.create(_user);
-    router.push("/admin/users");
+    router.push("/pondichery/admin/users");
   }
 });
 </script>

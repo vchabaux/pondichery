@@ -315,23 +315,23 @@ async function save(goal) {
       // COPY
       if ((status === "published" && goal !== "published") || (status === "pending" && goal === "draft" && !isAdmin.value)) {
         await copyNotice();
-        router.push("/admin/notices");
+        router.push("/pondichery/admin/notices");
         return;
       }
 
       // REPLACE
       if (currentNotice.value.original && goal !== "draft") {
         await replaceNotice(goal);
-        router.push("/admin/notices");
+        router.push("/pondichery/admin/notices");
         return;
       }
 
       // UPDATE
       await updateNotice(goal);
-      router.push("/admin/notices");
+      router.push("/pondichery/admin/notices");
     } else {
       noticeStore.create(notice.value);
-      router.push("/admin/notices");
+      router.push("/pondichery/admin/notices");
     }
   } catch (err) {
     console.log(handleError(err));

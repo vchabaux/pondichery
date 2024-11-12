@@ -63,7 +63,7 @@ const handleSubmit = async () => {
     };
 
     await api.patch("/account/password", data);
-    router.push("/auth/signin");
+    router.push("/pondichery/auth/signin");
   } catch (err) {
     submitted.value = false;
     error.value = {

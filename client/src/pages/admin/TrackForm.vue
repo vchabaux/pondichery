@@ -668,24 +668,24 @@ async function save(goal) {
         (status === "pending" && goal === "draft" && !isAdmin.value)
       ) {
         copyTrack();
-        router.push("/admin/tracks");
+        router.push("/pondichery/admin/tracks");
         return;
       }
 
       // REPLACE
       if (currentTrack.value.original && goal !== "draft" && status === goal) {
         replaceTrack(goal);
-        router.push("/admin/tracks");
+        router.push("/pondichery/admin/tracks");
         return;
       }
 
       // UPDATE
 
       await updateTrack(goal);
-      router.push("/admin/tracks");
+      router.push("/pondichery/admin/tracks");
     } else {
       trackStore.create(currentTrack.value);
-      router.push("/admin/tracks");
+      router.push("/pondichery/admin/tracks");
     }
   } catch (err) {
     console.log(err, "this is the err");

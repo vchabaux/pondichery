@@ -72,7 +72,7 @@ function goForward() {
     if (app.value === 'cnrs2' && currentIndex.value < content.value.content.length - 1) {
       currentIndex.value++;
     } else {
-      router.push("/");
+      router.push("/pondichery");
       window.localStorage.setItem("hasOnboarded", "true");
     }
   }

@@ -29,7 +29,7 @@ const submit = async (token) => {
 
 onMounted(async () => {
   const token = route.query.token;
-  if (!token) return router.push("/");
+  if (!token) return router.push("/pondichery");
 
   submit(token);
 });

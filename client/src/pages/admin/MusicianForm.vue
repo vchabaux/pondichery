@@ -103,7 +103,7 @@ async function saveMusician() {
     console.error(err);
   } finally {
     isSubmitting.value = false;
-    router.push("/admin/musicians");
+    router.push("/pondichery/admin/musicians");
   }
 }
 </script>

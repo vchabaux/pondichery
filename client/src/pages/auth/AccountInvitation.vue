@@ -45,10 +45,10 @@ const handleSubmit = async () => {
       return;
     }
 
-    await api.patch("/account/password", data);
+    await api.patch("pondichery/account/password", data);
     submitting.value = false;
 
-    router.push("/auth/signin");
+    router.push("/pondichery/auth/signin");
   } catch (err) {
     error.value = { status: err.response.status, message: err.response.data.message };
     submitting.value = false;
@@ -61,6 +61,6 @@ const handleSubmit = async () => {
 
 onMounted(() => {
   const { token } = route.query;
-  if (!token) return router.push("/"); // Redirect to home page
+  if (!token) return router.push("/pondichery"); // Redirect to home page
 });
 </script>

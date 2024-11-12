@@ -111,7 +111,7 @@ async function savePlaylist() {
     console.error(err);
   } finally {
     isSubmitting.value = false;
-    router.push("/admin/playlists");
+    router.push("/pondichery/admin/playlists");
   }
 }
 </script>
