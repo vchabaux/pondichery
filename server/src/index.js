@@ -32,9 +32,7 @@ app.use(
 
 app.use(
   cors({
-    origin: ['http://vchabaux.github.io', 'http://vchabaux.github.io'],  // Allow only this domain
-    methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE'], // Allowed methods
-    allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+    origin: "*",  // Allow only this domain
     credentials: true, // Allow credentials (cookies, Authorization headers)
   })
 );
