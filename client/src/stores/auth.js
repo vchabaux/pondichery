@@ -39,11 +39,14 @@ export const useAuthStore = defineStore("auth", {
 
   actions: {
     async signin(credentials) {
-      
-      const { data: user } = await api.post("/auth/signin", credentials);
-      this.user = user;
-    
-      return Promise.resolve();
+      try {
+        const { data: user } = await api.post("/auth/signin", credentials);
+        this.user = user;
+        return Promise.resolve();
+      } catch (error) {
+        console.error("Error during signin:", error);
+        return Promise.reject(error);  // ou une autre réponse appropriée
+      }
     },
 
     async initialize() {
