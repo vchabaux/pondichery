@@ -71,6 +71,11 @@ jobs:
           npm run build
           cd ..
 
+      # Étape pour dupliquer index.html en 404.html
+      - name: Duplicate index.html to 404.html
+        run: |
+          cp ./client/dist/index.html ./client/dist/404.html
+
       # Ajoutez une étape pour télécharger le dossier build du client comme artefact pour GitHub Pages
       - name: Upload client build artifact for GitHub Pages
         if: success()
