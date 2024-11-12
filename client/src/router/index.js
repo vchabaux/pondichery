@@ -7,7 +7,7 @@ export const initRouter = (app) => {
     history: createWebHistory("/pondichery/"),
     routes: [
       {
-        path: "/",
+        path: "/pondichery",
         component: AppMap,
         meta: {
           layout: "LayoutDefault",
@@ -15,7 +15,7 @@ export const initRouter = (app) => {
         },
       },
       {
-        path: "/intro",
+        path: "/pondichery/intro",
         component: () => import("@/pages/app/AppIntro.vue"),
         meta: {
           layout: "LayoutDefault",
