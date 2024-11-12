@@ -46,11 +46,11 @@ app.use(
 
 app.use("/static", express.static(path.join(__dirname, "..", "static")));
 
-app.use("/api", require("./routes"));
+app.use("/api2", require("./routes"));
 
 iconManagerServer.initRouters(app); // let's get awesome icons !
 
-app.use("/api/*", (_, __, next) => {
+app.use("/api2/*", (_, __, next) => {
   next(createError(404, "router::not-found"));
 });
 
