@@ -39,26 +39,11 @@ export const useAuthStore = defineStore("auth", {
 
   actions: {
     async signin(credentials) {
-      try {
-        const { data: user } = await api.post("/auth/signin", credentials);
-        this.user = user;
+      
+      const { data: user } = await api.post("/auth/signin", credentials);
+      this.user = user;
     
-        return Promise.resolve();
-      } catch (err) {
-        if (err.response) {
-          // Gérer les erreurs liées à la réponse du serveur
-          console.error("Erreur de connexion:", err.response.data);
-          throw new Error(`Erreur de connexion: ${err.response.data.message}`);
-        } else if (err.request) {
-          // La requête a été faite, mais aucune réponse n'a été reçue
-          console.error("Erreur de requête (CORS, serveur inaccessible, etc.):", err.request);
-          throw new Error("Erreur de requête (CORS, serveur inaccessible, etc.)");
-        } else {
-          // Une erreur lors de la configuration de la requête a eu lieu
-          console.error("Erreur inconnue:", err.message);
-          throw new Error(`Erreur inconnue: ${err.message}`);
-        }
-      }
+      return Promise.resolve();
     },
 
     async initialize() {
