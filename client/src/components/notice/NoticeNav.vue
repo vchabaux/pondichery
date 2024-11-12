@@ -28,7 +28,7 @@
     </Container>
 
     <Container class="notice-next">
-      <Link wide v-if="navigation?.finish && app === 'cnrs2'" class="nav-track" variant="text" path="/more/about">
+      <Link wide v-if="navigation?.finish && app === 'cnrs2'" class="nav-track" variant="text" path="/pondichery/more/about">
         <template #end><Icon name="link" /></template>
         {{$t('noticenav.about')}}
       </Link>

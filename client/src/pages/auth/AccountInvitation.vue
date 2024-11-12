@@ -6,7 +6,7 @@
   <Voice v-if="error" :message="error.message" type="error" @close="error = null" />
 
   <Text class="small-text">Veuillez créer votre mot de passe afin de continuer</Text>
-  <Link v-if="showResetLink" wide path="/password-forgotten"> Renvoyer un lien par e-mail </Link>
+  <Link v-if="showResetLink" wide path="/pondichery/password-forgotten"> Renvoyer un lien par e-mail </Link>
 
   <Container tag="form" @submit.prevent stretched>
     <Field v-model="password" type="password" label="Mot de passe" />

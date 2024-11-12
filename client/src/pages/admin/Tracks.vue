@@ -5,7 +5,7 @@
   <!-- Header -->
   <Container flow="row-between" variant="dash-title">
     <h1>Tracks</h1>
-    <Link path="/admin/tracks/new">New track</Link>
+    <Link path="/pondichery/admin/tracks/new">New track</Link>
   </Container>
 
   <!-- Filters -->
@@ -16,7 +16,7 @@
   <!-- List -->
   <DaTable expandable class="fix-table" :data="filtered" layout="1fr 0.5fr 0.5fr 0.5fr" :columns="columnsTracks">
     <template #row-controls="{ item }">
-      <Link aria-label="edit" title="edit" v-if="getPermission(item)" variant="outline" size="s" :path="`/admin/tracks/${item._id}`">
+      <Link aria-label="edit" title="edit" v-if="getPermission(item)" variant="outline" size="s" :path="`/pondichery/admin/tracks/${item._id}`">
         <Icon name="pen" />
       </Link>
       <Button v-if="getPermission(item)" class="danger-btn" aria-label="delete" title="delete" variant="outline" size="s" @click="prepareDelete(item._id)">

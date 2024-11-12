@@ -5,7 +5,7 @@
 
   <DaTable class="fix-table" :data="pages" :columns="columnsContent" layout="1fr 1fr">
     <template #row-controls="{ item }">
-      <Link aria-label="edit" title="edit" variant="outline" size="s" :path="`/admin/content/${item.slug}`">
+      <Link aria-label="edit" title="edit" variant="outline" size="s" :path="`/pondichery/admin/content/${item.slug}`">
         <Icon name="pen" />
       </Link>
     </template>

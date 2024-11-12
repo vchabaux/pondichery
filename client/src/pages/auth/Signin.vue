@@ -32,7 +32,7 @@
 
     <Container flow="row">
       <Text>Mot de passe oublié ?</Text>
-      <Link class="link" path="/password-forgotten" variant="text">
+      <Link class="link" path="/pondichery/password-forgotten" variant="text">
         Réinitialiser
       </Link>
     </Container>

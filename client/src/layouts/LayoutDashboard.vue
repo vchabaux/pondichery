@@ -4,23 +4,23 @@
       <Sidebar :home="home" :links="links.sort((a, b) => a.name.localeCompare(b.name))" :user="user">
         <template #footer>
           <Container class="notifications" v-if="hasNotifications">
-            <Link size="s" path="/admin/tracks" variant="text" v-if="pending.tracks">
+            <Link size="s" path="/pondichery/admin/tracks" variant="text" v-if="pending.tracks">
               <template #start><Icon name="bell" /></template>
               {{ pending.tracks }} tracks
             </Link>
-            <Link size="s" path="/admin/notices" variant="text" v-if="pending.notices">
+            <Link size="s" path="/pondichery/admin/notices" variant="text" v-if="pending.notices">
               <template #start><Icon name="bell" /></template>
               {{ pending.notices }} notices
             </Link>
           </Container>
 
-          <Link wide path="/" target="_blank" class="app-link">
+          <Link wide path="/pondichery" target="_blank" class="app-link">
             <template #end><Icon name="arrow-up-right-from-square" /></template>
             Open app
           </Link>
 
           <Container flow="row-between">
-            <Link path="/admin/profile" variant="text">
+            <Link path="/pondichery/admin/profile" variant="text">
               {{ user.name }}
               {{ !fullTimeAccount && expiresIn < 30 ? ` (${expiresIn}d left)` : "" }}
             </Link>
@@ -59,14 +59,14 @@ const hasNotifications = computed(() => (isAdmin && pending.value.tracks) || pen
 const home = computed(() => {
   return {
     name: settings.value.name,
-    path: "/admin",
+    path: "/pondichery/admin",
   };
 });
 
 const links = [
-  { name: "Tracks", path: "/admin/tracks" },
-  { name: "Notices", path: "/admin/notices" },
-  { name: "Categories", path: "/admin/categories" },
+  { name: "Tracks", path: "/pondichery/admin/tracks" },
+  { name: "Notices", path: "/pondichery/admin/notices" },
+  { name: "Categories", path: "/pondichery/admin/categories" },
 ];
 
 app.value === "cnrs1" ? links.unshift({ name: "Artists", path: "/pondichery/admin/musicians" }) : links.unshift({ name: "Playlists", path: "/pondichery/admin/playlists" });

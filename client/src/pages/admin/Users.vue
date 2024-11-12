@@ -4,12 +4,12 @@
 
   <Container flow="row-between" variant="dash-title">
     <h1>Users</h1>
-    <Link path="/admin/users/new">New user</Link>
+    <Link path="/pondichery/admin/users/new">New user</Link>
   </Container>
 
   <DaTable class="fix-table" :data="users" :columns="columnsUsers" layout="2fr 1fr 1fr 1fr">
     <template #row-controls="{ item }">
-      <Link aria-label="edit" title="edit" variant="outline" size="s" :path="`/admin/users/${item._id}`">
+      <Link aria-label="edit" title="edit" variant="outline" size="s" :path="`/pondichery/admin/users/${item._id}`">
         <Icon name="pen" />
       </Link>
       <Button class="danger-btn" aria-label="delete" title="delete" variant="outline" size="s" @click="prepareDelete(item._id)">

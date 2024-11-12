@@ -8,7 +8,7 @@
   <!-- Header -->
   <Container flow="row-between" variant="dash-title">
     <h1>Notices</h1>
-    <Link path="/admin/notices/new">New notice</Link>
+    <Link path="/pondichery/admin/notices/new">New notice</Link>
   </Container>
 
   <!-- Filters -->
@@ -26,7 +26,7 @@
       <Button aria-label="preview" title="preview" size="s" @click="previewNotice(item._id)">
         <Icon name="eye" />
       </Button>
-      <Link aria-label="edit" title="edit" v-if="getPermission(item)" variant="outline" size="s" :path="`/admin/notices/${item._id}`">
+      <Link aria-label="edit" title="edit" v-if="getPermission(item)" variant="outline" size="s" :path="`/pondichery/admin/notices/${item._id}`">
         <Icon name="pen" />
       </Link>
       <Button

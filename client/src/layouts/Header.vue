@@ -2,26 +2,26 @@
   <Container tag="header" flow="row-between" stretched :class="{'-accent' : app === 'cnrs2'}">
     <Container flow="row" stretched>
       <Container class="header-title -uppercase" :class="{ 'img-title': app === 'cnrs2' }" flow="row">
-        <Link v-if="app === 'cnrs1'" variant="text" class="header-link" path="/">{{ settings?.name }}</Link>
+        <Link v-if="app === 'cnrs1'" variant="text" class="header-link" path="/pondichery">{{ settings?.name }}</Link>
         <RouterLink v-else to="/"><Image src="/cnrs2-logo.jpg" alt="São José" width="150" /></RouterLink>
       </Container>
 
       <Container class="desktop-nav" tag="nav" flow="row" stretched>
         <Container class="header-nav" tag="ul" flow="row" stretched>
           <Container flow="row" tag="li" stretched>
-            <Link variant="text" class="header-link" active-class="-active" path="/" v-t="'header.map'"></Link>
+            <Link variant="text" class="header-link" active-class="-active" path="/pondichery" v-t="'header.map'"></Link>
           </Container>
           <Container flow="row" tag="li" stretched>
-            <Link variant="text" class="header-link" active-class="-active" path="/more/about" v-t="'header.about'"></Link>
+            <Link variant="text" class="header-link" active-class="-active" path="/pondichery/more/about" v-t="'header.about'"></Link>
           </Container>
           <Container v-if="app === 'cnrs1'" flow="row" tag="li" stretched>
-            <Link variant="text" class="header-link" active-class="-active" path="/more/musicians">Artistes</Link>
+            <Link variant="text" class="header-link" active-class="-active" path="/pondichery/more/musicians">Artistes</Link>
           </Container>
           <Container v-if="app === 'cnrs1'" flow="row" tag="li" stretched>
-            <Link variant="text" class="header-link" active-class="-active" path="/more/cards">Fiches pédagogiques</Link>
+            <Link variant="text" class="header-link" active-class="-active" path="/pondichery/more/cards">Fiches pédagogiques</Link>
           </Container>
           <Container v-else flow="row" tag="li" stretched>
-            <Link variant="text" class="header-link" active-class="-active" path="/more/itineraries">Itineraries</Link>
+            <Link variant="text" class="header-link" active-class="-active" path="/pondichery/more/itineraries">Itineraries</Link>
           </Container>
         </Container>
       </Container>
@@ -39,19 +39,19 @@
       <Container v-if="open" class="mobile-nav" @keyup.escape="emit('toggleMenu')">
         <Container class="header-nav" tag="ul">
           <Container tag="li">
-            <Link wide variant="text" class="header-link" active-class="-active" path="/" v-t="'header.map'"></Link>
+            <Link wide variant="text" class="header-link" active-class="-active" path="/pondichery/" v-t="'header.map'"></Link>
           </Container>
           <Container tag="li">
-            <Link wide variant="text" class="header-link" active-class="-active" path="/more/about" v-t="'header.about'"></Link>
+            <Link wide variant="text" class="header-link" active-class="-active" path="/pondichery/more/about" v-t="'header.about'"></Link>
           </Container>
           <Container v-if="app === 'cnrs1'" tag="li">
-            <Link wide variant="text" class="header-link" active-class="-active" path="/more/musicians">Artistes</Link>
+            <Link wide variant="text" class="header-link" active-class="-active" path="/pondichery/more/musicians">Artistes</Link>
           </Container>
           <Container v-if="app === 'cnrs1'" tag="li">
-            <Link wide variant="text" class="header-link" active-class="-active" path="/more/cards">Fiches pédagogiques</Link>
+            <Link wide variant="text" class="header-link" active-class="-active" path="/pondichery/more/cards">Fiches pédagogiques</Link>
           </Container>
           <Container v-else tag="li">
-            <Link wide variant="text" class="header-link" active-class="-active" path="/more/itineraries">Itineraries</Link>
+            <Link wide variant="text" class="header-link" active-class="-active" path="/pondichery/more/itineraries">Itineraries</Link>
           </Container>
         </Container>
 

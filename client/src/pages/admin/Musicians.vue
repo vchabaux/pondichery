@@ -5,13 +5,13 @@
   <!-- Header -->
   <Container flow="row-between" variant="dash-title">
     <h1>Artists</h1>
-    <Link path="/admin/musicians/new">New artist</Link>
+    <Link path="/pondichery/admin/musicians/new">New artist</Link>
   </Container>
 
   <!-- List -->
   <Datable :data="musicians" :columns="columnsMusicians" selectionKey="_id" layout="2fr 1fr 1fr">
     <template #row-controls="{ item }">
-      <Link aria-label="edit" title="edit" size="s" variant="outline" :path="`/admin/musicians/${item._id}`">
+      <Link aria-label="edit" title="edit" size="s" variant="outline" :path="`/pondichery/admin/musicians/${item._id}`">
         <Icon name="pen" />
       </Link>
       <Button aria-label="delete" title="delete" size="s" variant="outline" class="danger-btn" :pending="isSubmitting" @click="openDialogDelete(item._id)">

@@ -5,7 +5,7 @@
 
   <Text>Félicitations ! Votre compte a bien été créé</Text>
 
-  <Link wide path="/auth/signin">Se connecter</Link>
+  <Link wide path="/pondichery/auth/signin">Se connecter</Link>
 </template>
 
 <script setup>

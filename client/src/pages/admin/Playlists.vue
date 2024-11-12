@@ -5,7 +5,7 @@
   <!-- Header -->
   <Container flow="row-between" variant="dash-title">
     <h1>Playlists</h1>
-    <Link path="/admin/playlists/new">New playlist</Link>
+    <Link path="/pondichery/admin/playlists/new">New playlist</Link>
   </Container>
 
   <!-- List -->
@@ -19,7 +19,7 @@
         @click="usePlaylist(item)">
         <Icon name="star" />
       </Button>
-      <Link aria-label="edit" title="edit" size="s" variant="outline" :path="`/admin/playlists/${item._id}`">
+      <Link aria-label="edit" title="edit" size="s" variant="outline" :path="`/pondichery/admin/playlists/${item._id}`">
         <Icon name="pen" />
       </Link>
       <Button

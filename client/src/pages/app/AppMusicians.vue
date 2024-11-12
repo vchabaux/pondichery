@@ -33,7 +33,7 @@
             </Container>
 
             <Container>
-              <Link variant="outline" :path="`/?musician=${mus._id}`"
+              <Link variant="outline" :path="`/pondichery/?musician=${mus._id}`"
                 >Explorer son parcours</Link
               >
             </Container>

@@ -10,12 +10,12 @@
 
     <Container flow="row" v-if="isPublic">
       <Button variant="outline" @click="router.go(-1)" v-t="'notfound.back'"></Button>
-      <Link :path="isPublic ? '/' : '/admin'" v-t="'notfound.home'"></Link>
+      <Link :path="isPublic ? '/pondichery' : '/pondichery/admin'" v-t="'notfound.home'"></Link>
     </Container>
 
     <Container flow="row" v-else>
       <Button variant="outline" @click="router.go(-1)">Go back</Button>
-      <Link :path="isPublic ? '/' : '/admin'">Home</Link>
+      <Link :path="isPublic ? '/pondichery' : '/pondichery/admin'">Home</Link>
     </Container>
   </Container>
 </template>
