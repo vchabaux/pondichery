@@ -28,7 +28,7 @@
     </Container>
 
     <Container class="header-extra desktop-extra" flow="row" stretched>
-      <Link path="/intro" variant="text"> {{ app === 'cnrs1' ? 'Bande annonce' : 'Intro' }} </Link>
+      <Link path="/pondichery/intro" variant="text"> {{ app === 'cnrs1' ? 'Bande annonce' : 'Intro' }} </Link>
     </Container>
 
     <Container class="mobile-menu" flow="row" stretched>
@@ -56,7 +56,7 @@
         </Container>
 
         <Container class="header-extra" flow="row">
-          <Link path="/intro" variant="text"> {{ app === 'cnrs1' ? 'Bande annonce' : 'Intro' }} </Link>
+          <Link path="/pondichery/intro" variant="text"> {{ app === 'cnrs1' ? 'Bande annonce' : 'Intro' }} </Link>
         </Container>
       </Container>
     </Container>

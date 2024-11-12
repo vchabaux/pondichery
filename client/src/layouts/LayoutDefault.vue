@@ -24,7 +24,7 @@ const route = useRoute();
 const settingsStore = useStore("settings");
 const app = computed(() => settingsStore.project);
 const isMenuOpen = ref(false);
-const isIntro = computed(() => route.path === "/intro");
+const isIntro = computed(() => route.path === "/pondichery/intro");
 
 if (app.value === "cnrs1") {
   import("@/styles/cnrs1.css");
