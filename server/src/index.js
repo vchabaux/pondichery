@@ -38,6 +38,11 @@ app.use(
   })
 );
 
+app.options('*', cors({
+  origin: 'https://vchabaux.github.io',
+  credentials: true
+}));
+
 app.use(express.static(path.join(__dirname, "..", "public")));
 
 app.use(
